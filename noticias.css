@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* ... todo o seu CSS de antes ... */
+
+.filtros {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .fontes {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .fontes p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #ddd;
+  }
+  
+  .fontes button {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .fontes button:hover {
+    background: #ffcc00;
+    color: black;
+  }
+  
+  .filtros button {
+    background: brown;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Audiowide;
+  }
+  
+  .filtros button:hover {
+    background: #ffcc00;
+    color: black;
+  }
+  
+  body {
+    background-color: rgb(31,21,22);
+    font-family: Audiowide;
+    color: white;
+  }
+  
+  .header {
+    background-color: brown;
+    padding-inline: 16px;
+  }
+  
+  .nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 48px;
+    color: white;
+  }
+  
+  .nav-list {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  
+  .nav-list a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding-block: 16px;
+  }
+  
+  .nav-list a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Layout de notícias */
+  .noticias-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  
+  .noticias-container h1 {
+    text-align: center;
+    color: #0ff;
+    margin-bottom: 30px;
+  }
+  
+  .noticia {
+    display: flex;
+    gap: 20px;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  
+  .noticia img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .noticia h2 {
+    margin-bottom: 10px;
+    color: #ffcc00;
+  }
+  
+  .noticia p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .noticia a {
+    color: #0ff;
+    text-decoration: none;
+  }
+  
+  .noticia a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .noticia {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .noticia img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  

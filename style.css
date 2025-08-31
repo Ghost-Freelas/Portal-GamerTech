@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(31,21,22);
+    font-family: Audiowide;
+}
+a{
+    font-family: Audiowide;
+    text-decoration: none;
+}
+.header{
+    background-color: brown;
+    padding-inline: 16px;
+}
+.nav{
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 48px;
+    color: white;
+}
+.nav-list{
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+.nav-list a{
+    font-size: 18px;
+    color: white;
+    padding-block: 16px;
+}
+.nav-list a:hover{
+    text-decoration: underline;
+}
+.hamburguer{
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid white;
+    cursor: pointer;
+}
+.hamburguer::before,
+.hamburguer::after{
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+
+@media (max-width: 750px){
+    .hamburguer{
+        display: block;
+        z-index: 1;
+    }
+    .nav-list{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: brown;
+        clip-path: circle(100px at 90% -15%);
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+    .nav-list a{
+        font-size: 24px;
+        opacity: 0;
+    }
+
+    .nav-list li:nth-child(1) a{
+        transition: 0.5s 0.2s;
+    }
+    .nav-list li:nth-child(2) a{
+        transition: 0.5s 0.4s;
+    }
+    .nav-list li:nth-child(3) a{
+        transition: 0.5s 0.6s;
+    }
+
+    .nav.active .nav-list{
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+    .nav.active .nav-list a{
+        opacity: 1;
+    }
+    .nav.active .hamburguer{
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    .nav.active .hamburguer::before{
+        transform: rotate(135deg);
+
+    }
+    .nav.active .hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+        
+    }
+}
+.bodytwo{
+    color: white;
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+    display: inline-block;
+    animation: deslizar 1s linear infinite alternate;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 0;
+}
+@keyframes deslizar{
+    0% {left: 0;}
+    100% {left: 17%;}
+}

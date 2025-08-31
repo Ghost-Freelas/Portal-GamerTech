@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notícias - GamerTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="noticias.css">
+  <script defer src="script.js"></script>
+  <script defer src="noticias.js"></script>
+
+
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+        <a href="index.html" class="logo">&#x1F579;</a>
+        <button class="hamburguer"></button>
+        <ul class="nav-list">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="topjogos.html">Top Jogos</a></li>
+            <li><a href="#">Em Breve: Login</a></li>
+        </ul>
+        </nav>
+    </header>
+
+  <main class="noticias-container">
+    <h1>Últimas Notícias</h1>
+
+    <!-- Botões de categoria -->
+    <div class="filtros">
+        <button onclick="carregarNoticias('games')">Todas</button>
+        <button onclick="carregarNoticias('PC games')">PC</button>
+        <button onclick="carregarNoticias('Android games')">Android</button>
+    </div>
+      
+    <section id="lista-noticias">Carregando notícias...</section>
+      
+    <div class="fontes">
+        <p>Fonte:</p>
+        <button onclick="trocarFonte('newsapi')">NewsAPI</button>
+    </div>
+      
+
+    <!-- Aqui o JS insere as notícias -->
+    <section id="lista-noticias"></section>
+  </main>
+</body>
+</html>
